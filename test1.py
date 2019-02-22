@@ -15,4 +15,5 @@ while i==1:
     os.system("git add .")
     os.system("git commit -m 'hi' ")
     os.system("git push")
-    time.sleep(60)
+    time.sleep(5)
+    print("5 seconds passed")
