@@ -10,6 +10,6 @@ f = open("index.html","w+")
 f.write(html2)
 f.close()
 os.system("git add .")
-os.system("git commit")
+os.system("git commit -m 'hi' ")
 os.system("git push")
 
