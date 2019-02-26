@@ -20,8 +20,8 @@ while i==1:
     html3 = ''.join([a,b,c,d,e])
     for x in temps:
         p_table.append(x)
-    html3 = ''.join(p_table)
-    html3 = ''.join([f])
+    html3 = html3.join(p_table)
+    html3 = html3.join([f])
     f = open("index.html","w+")
     f.write(html3)
     f.close()
