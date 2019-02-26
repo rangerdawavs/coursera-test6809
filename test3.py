@@ -14,6 +14,7 @@ while i==1:
         html2 = html.decode("utf-8")
         print(html2)
         time.sleep(20)
+    p_table = []
     a,b,c,d,e,f = html2.split("x")
     temps.append(b)
     hums.append(d)
