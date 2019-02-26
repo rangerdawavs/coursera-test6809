@@ -6,6 +6,7 @@ times = ["time"]
 temps = ["temperature"]
 hums = ["humidity"]
 table = [times,temps,hums]
+p_table = []
 while i==1:
     for x in range(3):
         with urllib.request.urlopen('http://192.168.1.187/') as response:
@@ -16,7 +17,11 @@ while i==1:
     a,b,c,d,e,f = html2.split("x")
     temps.append(b)
     hums.append(d)
-    html3 = ''.join([a,b,c,d,e,f])
+    html3 = ''.join([a,b,c,d,e])
+    for x in temps:
+        p_table.append(x)
+    html3 = ''.join(p_table)
+    html3 = ''.join([f])
     f = open("index.html","w+")
     f.write(html3)
     f.close()
