@@ -1,6 +1,7 @@
 import urllib.request
 import time
 import os
+import datetime
 i = 1
 times = ["time"]
 temps = ["temperature"]
@@ -18,6 +19,8 @@ while i==1:
     a,b,c,d,e,f = html2.split("x")
     temps.append(b)
     hums.append(d)
+    currentDT = datetime.datetime.now()
+    times.append(str(currentDT))
     p_table.append(a)
     p_table.append(b)
     p_table.append(c)
@@ -26,6 +29,9 @@ while i==1:
     p_table.append("<table style='width:100%'>")
     for x in range(len(temps)):
         p_table.append("<tr>")
+        p_table.append("<th>")
+        p_table.append(times[x])
+        p_table.append("</th>")
         p_table.append("<th>")
         p_table.append(temps[x])
         p_table.append("</th>")
